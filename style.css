@@ -963,13 +963,26 @@ MOBILE RESPONSIVENESS ↓
     .btn__menu {
         display: block;
     }
+
     header .row {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
+
+    .getstarted,
+    .about__figure--container {
+        width: 100%;
+    }
+
+    .getstarted {
+        align-items: center;
+    }
+
     footer {
         padding: 80px 32px;
     }
+
     .nav__links {
         display: none;
     }
@@ -982,6 +995,10 @@ MOBILE RESPONSIVENESS ↓
         flex-wrap: wrap;
         flex-direction: column;
     }
+    
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media(max-width: 768px) {
@@ -989,13 +1006,54 @@ MOBILE RESPONSIVENESS ↓
     #values .row {
         flex-direction: column-reverse;
     }
+
     #steps .row,
     #testimonials .row {
         flex-direction: column;
         align-items: center;
     }
+
     #pricing .row {
         margin-top: 40px;
+    }
+
+    .quality-work__section,
+    .quality-work__img--container,
+    .steps__img--container,
+    .values__main,
+    .values__img--container,
+    .testimonials__section,
+    .testimonials__img--container {
+        width: 100%;
+    }
+
+    .values__section {
+        flex-direction: column-reverse;
+    }
+
+    .steps__section {
+        width: 100%;
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    #start .start__section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .start__section--description,
+    .start__buttons {
+        width: 100%;
+        margin: 16px 0;
+    }
+
+    .start__section--paragraph {
+        text-align: center;
+    }
+
+    .link {
+        width: calc(100% / 3);
     }
 
     .nav__links {
@@ -1016,13 +1074,16 @@ MOBILE RESPONSIVENESS ↓
     .container {
         padding: 80px 0;
     }
+
     .nav__logo {
         margin: 8px 0;
         padding-bottom: 4px;
     }
+
     main {
         margin-bottom: 80px;
     }
+
     .nav__links {
         display: none;
     }
@@ -1034,5 +1095,46 @@ MOBILE RESPONSIVENESS ↓
     .start__buttons {
         flex-wrap: wrap;
         flex-direction: column;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .link {
+        width: 50%;
+    }
+
+    .footer__info {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .about__email {
+        padding-right: 100px;
+    }
+    
+    .about__email--submit {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .section__title {
+        font-size: 26px;
+    }
+}
+
+@media(max-width: 480px) {
+    .link {
+        width: 100%;
+    }
+
+    .pricing__card--top {
+        padding: 24px 20px 16px 20px;
+    }
+
+    .logo__text {
+        font-size: 24px;
     }
 }
