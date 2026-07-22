@@ -43,7 +43,7 @@ main {
 
 .section__title {
     font-size: 32px;
-    color: #1a202c;
+    color: #243e63;
     margin: 0 0 16px 0;
     padding: 0;
 }
@@ -370,12 +370,13 @@ QUALITY WORK ↓
     text-align: left;
 }
 
-.quality-work__button {
+.learn-more__button {
     align-self: flex-start;
     padding: 8px 32px;
     background: #6415ff;
     color: white;
     border-radius: 32px;
+    border: none;
     cursor: not-allowed;
 }
 
@@ -459,6 +460,85 @@ VALUES ↓
     align-items: center;
 }
 
+.values__section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.values__main {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    text-align: left;
+}
+
+.value__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 16px;
+}
+
+.value {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%;
+    min-width: 220px;
+}
+
+.value__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.value__heading {
+    font-size: 16px;
+    margin: 0;
+    color: #243e63;
+}
+
+.value p {
+    font-size: 14px;
+    color: #243e63;
+    margin: 0;
+}
+
+.value__sign {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.value__sign--1 {
+    border: 2px solid #148d00;
+    background-color: #9dd194;
+    color: #148d00;
+}
+
+.value__sign--2 {
+    border: 2px solid #c16f6f;
+    background-color: #e7a0a0;
+    color: #c16f6f;
+}
+
+.values__img--container {
+    width: 55%;
+}
+
+.values__img {
+    width: 100%;
+}
+
+.value__title h3 {
+    font-size: 16px;
+}
 
 /*
 
@@ -466,11 +546,142 @@ PRICING ↓
 
 */
 
-
 #pricing .row {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.pricing__description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#pricing p {
+    max-width: 600px;
+    text-align: center;
+}
+
+.pricing__cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 24px;
+}
+
+.pricing__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid lightgray;
+    padding: 16px;
+}
+
+.pricing__card--top {
+    padding: 32px 32px 16px 32px;
+    margin: 0 auto;
+}
+
+.pricing__card--title {
+    color: black;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+.pricing__card--price {
+    color: black;
+}
+
+.pricing__card--frequency {
+    color: gray;
+    font-size: 12px;
+    padding-top: 16px;
+}
+
+.pricing__card--sub-title {
+    color: black;
+    padding-bottom: 16px;
+}
+
+.pricing__card--list li {
+    color: gray;
+    font-weight: 300;
+}
+
+.pricing__card--middle {
+    padding: 32px 0 32px 0;
+    margin: 16px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.pricing__card--middle li {
+    list-style: none;
+}
+
+.pricing__card--bottom {
+    padding: 16px;
+}
+
+.pricing__card--button {
+    padding: 12px 48px;
+    cursor: not-allowed;
+    border-radius: 32px;
+    border: none;
+}
+
+.pricing__card--personal::before,
+.pricing__card--enterprise::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+}
+
+.pricing__card--personal::before {
+    background: linear-gradient(to right, green, lightgreen);
+}
+
+.pricing__card--enterprise::before {
+    background: linear-gradient(to right, rgb(214, 148, 25), orange);
+}
+
+.pricing__card--personal button {
+    color: white;
+    text-shadow: 0 4px 4px #148d00;
+    background: linear-gradient(155deg, green, lightgreen);
+}
+
+.pricing__card--enterprise button {
+    color: white;
+    text-shadow: 0 2px 2px black;
+    background: linear-gradient(155deg, orange, brown);
+}
+
+.pricing__card--business {
+    background: linear-gradient(155deg, lightblue, blue);
+    border: none;
+}
+
+.pricing__card--business .pricing__card--title, 
+.pricing__card--business .pricing__card--price,
+.pricing__card--business .pricing__card--frequency,
+.pricing__card--business .pricing__card--middle li,
+.pricing__card--business .pricing__card--sub-title {
+    color: white;
+    text-shadow: 0 2px 2px black;
+}
+
+.pricing__card--business button {
+    background: linear-gradient(225deg, aqua, darkblue);
+    color: white;
+    text-shadow: 0 4px 4px black;
 }
 
 /* 
@@ -479,11 +690,90 @@ TESTIMONIALS ↓
 
 */
 
-
 #testimonials .row {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.testimonials__img--container {
+    width: 45%;
+}
+
+.testimonials__img {
+    width: 100%;
+}
+
+.testimonials__section {
+    display: flex;
+    flex-direction: column;
+    padding-left: 32px;
+    width: 55%;
+}
+
+.review__container {
+    width: 100%;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.review {
+    margin: auto 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.review--star {
+    color: gold;
+}
+
+.review--title {
+    font-size: medium;
+}
+
+.review__description {
+    font-size: small;
+    text-align: left;
+}
+
+.review__author {
+    display: flex;
+    flex-direction: row;
+}
+
+.author {
+    flex: 1;
+}
+
+.review__author--icon {
+    max-width: 65px;
+    padding-right: 8px;
+    border-radius: 50%;
+}
+
+.author__name {
+    font-size: medium;
+    font-weight: 900;
+}
+
+.author__origin {
+    font-size: small;
+    font-weight: 400;
+    color: darkgray;
+}
+
+.button--right,
+.button--left {
+    background-color: rgb(230, 230, 230);
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    cursor: not-allowed;
+}
 
 /* 
 
@@ -491,13 +781,60 @@ START / CALL TO ACTION ↓
 
 */
 
-
-
 #start .row {
     position: relative;
-    overflow: hidden;
 }
 
+.start__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6415ff;
+    
+    box-shadow: 0 8px 32px gray;
+    border-radius: 8px;
+}
+
+.start__section--description {
+    width: 60%;
+    margin: 32px 32px;
+    padding: 16px;
+}
+
+.start__section--paragraph {
+    text-align: left;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+}
+
+.start__buttons {
+    display: flex;
+    width: 40%;
+}
+
+.get-started, .contact {
+    padding: 10px 24px;
+    margin: 8px;
+    cursor: not-allowed;
+}
+
+.get-started {
+    box-shadow: 0 2px 4px black;
+    text-shadow: 0 2px 2px black;
+    color: white;
+    border: none;
+    border-radius: 32px;
+    background: linear-gradient(150deg, orange, brown);
+}
+
+.contact {
+    text-shadow: 0 2px 2px black;
+    color: white;
+    background: #6415ff;
+    border: 1px solid orange;
+    border-radius: 32px;
+}
 
 /* 
 
